@@ -1,10 +1,10 @@
-<h1 align='center'>Chennai HOTEL REVIEWS CLASSIFIER</h1>
+<h1 align='center'>CHENNAI HOTEL REVIEWS CLASSIFIER</h1>
 
 <p align="center">
   <img src="https://github.com/awesomeahi95/Hotel_Review_NLP/blob/master/Images/five_stars.png" width=600>
 </p>
 
-<strong> Here is a demo application of the review classifier: https://hilton-hotel-app.herokuapp.com/ </strong> 
+#<strong> Here is a demo application of the review classifier: https://hilton-hotel-app.herokuapp.com/ </strong> 
 
 Try it out by inputting a review that you found online, or wrote yourself, and it will clasify the review title, the review, or both with a score between 1-5.
 
@@ -19,9 +19,9 @@ Potential customers, could have their hotel choice be influenced by a tweet. Opi
 
 By using sentiment analysis, on existing hotel reviews from Tripadvisor.com, I created a model that can quantify on a scale of 1-5, how the author of a tweet on twitter, or a post on a reddit thread, feels about our hotel, and as a result, also how the readers think about us. If a review classifies to be less than a score of 3, this post/tweet could be looked into, find out why they had a negative opinion of our hotel, and in return fix the problem. 
 
-Email: candyahs@gmail.com <br>
-LinkedIn: www.linkedin.com/in/ahilan-srivishnumohan/ <br>
-Medium: www.medium.com/@candyahs <br>
+Email: avinashnair02@gmail.com <br>
+LinkedIn: https://www.linkedin.com/in/avinash-nair-299b72157/ <br>
+Medium: https://avinashnair02.medium.com/ <br>
 
 ## Table of Contents
 <details open>
