@@ -66,7 +66,7 @@ sl.title("Hotel Review Classifier Application")
 page_bg_img = '''
 <style>
 body {
-background-image: url('https://images.unsplash.com/photo-1580835845971-a393b73bf370?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1267&q=80');
+background-image: url('https://images.unsplash.com/photo-1454388683759-ee76c15fee26?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
 background-repeat: no-repeat;
 background-size: cover;
 }
@@ -74,6 +74,10 @@ background-size: cover;
     backdrop-filter: blur(0px);
 }
 .markdown-text-container > h1{text-align:center}
+.css-1sls4c0 {
+    background:none;
+        backdrop-filter: blur(10px);
+}
 </style>
 
 
@@ -107,3 +111,84 @@ if sl.button('Predict'):
     prediction = np.argmax(prediction)
     
     sl.success(prediction+1)
+
+import streamlit as st
+from htbuilder import HtmlElement, div, ul, li, br, hr, a, p, img, styles, classes, fonts
+from htbuilder.units import percent, px
+from htbuilder.funcs import rgba, rgb
+
+
+def image(src_as_string, **style):
+    return img(src=src_as_string, style=styles(**style))
+
+
+def link(link, text, **style):
+    return a(_href=link, _target="_blank", style=styles(**style))(text)
+
+
+def layout(*args):
+
+    style = """
+    <style>
+      # MainMenu {visibility: hidden;}
+      footer {visibility: hidden;}
+     .stApp { bottom: 105px; }
+    </style>
+    """
+
+    style_div = styles(
+        position="fixed",
+        left=0,
+        bottom=0,
+        margin=px(0, 0, 0, 0),
+        width=percent(100),
+        color="black",
+        text_align="center",
+        height="auto",
+        opacity=1
+    )
+
+    style_hr = styles(
+        display="block",
+        margin=px(8, 8, "auto", "auto"),
+        border_style="inset",
+        border_width=px(2)
+    )
+
+    body = p()
+    foot = div(
+        style=style_div
+    )(
+        hr(
+            style=style_hr
+        ),
+        body
+    )
+
+    st.markdown(style, unsafe_allow_html=True)
+
+    for arg in args:
+        if isinstance(arg, str):
+            body(arg)
+
+        elif isinstance(arg, HtmlElement):
+            body(arg)
+
+    st.markdown(str(foot), unsafe_allow_html=True)
+
+
+def footer():
+    myargs = [
+        "Made in ",
+        image('https://avatars3.githubusercontent.com/u/45109972?s=400&v=4',
+              width=px(25), height=px(25)),
+        " with ❤️ by Avinash Nair",
+        link("https://www.linkedin.com/in/avinash-nair-299b72157/", "@AvinashNair"),
+        br(),
+        
+    ]
+    layout(*myargs)
+
+
+if __name__ == "__main__":
+    footer()
