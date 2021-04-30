@@ -185,8 +185,13 @@ Medium: https://avinashnair02.medium.com/ <br>
 <a name="Webscraping"></a>
 #### Webscraping
 
-I set a goal of a minimum of 5000 reviews to scrape, before choosing the specific hotels. I then chose the 8  hotels in Chennai  with the highest number of reviews, to scrape;The_Park_Chennai-Chennai_,GreenPark_Chennai-Chennai
-,Hilton_Chennai-Chennai_Ma,Hyatt_Regency_Chennai-Che,Taj_Club_House-Chennai_Ma,Radisson_Blu_Hotel_GRT_Ch,Lemon_Tree_Hotel_Chennai-. 
+I set a goal of a minimum of 5000 reviews to scrape, before choosing the specific hotels. I then chose the 8  hotels in Chennai  with the highest number of reviews, to scrape;The_Park_Chennai-Chennai_,
+GreenPark_Chennai-Chennai
+Hilton_Chennai-Chennai_Ma
+Hyatt_Regency_Chennai-Che
+Taj_Club_House-Chennai_Ma
+Radisson_Blu_Hotel_GRT_Ch
+Lemon_Tree_Hotel_Chennai-. 
 Between these 5 hotels there were 17538 reviews, I had plenty room to filter or drop reviews and retain at least my minimum of 5000.
 
 <h5 align="center">Tripadvisor Review Example</h5>
@@ -199,6 +204,9 @@ The structure of each review consisted of a 1-5 scale score rating in bubble for
 The root URL I used was 'www.tripadvisor.co.in'
 
 The 8 starting URL extensions I used were:
+
+
+
 -'/Hotel_Review-g304556-d301636-Reviews-The_Park_Chennai-Chennai_Madras_Chennai_District_Tamil_Nadu.html'
 -'/Hotel_Review-g304556-d730057-Reviews-GreenPark_Chennai-Chennai_Madras_Chennai_District_Tamil_Nadu.html'
 -'/Hotel_Review-g304556-d1597314-Reviews-Hilton_Chennai-Chennai_Madras_Chennai_District_Tamil_Nadu.html'
