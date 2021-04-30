@@ -4,7 +4,7 @@
   <img src="https://github.com/avinashnair02/Hotel_Review_Classifier_/blob/master/Images/five_stars.png" width=600>
 </p>
 
-#<strong> Here is a demo application of the review classifier: https://hilton-hotel-app.herokuapp.com/ </strong> #
+<!-- #-<<strong> Here is a demo application of the review classifier: https://hilton-hotel-app.herokuapp.com/ </strong> -> -->
 
 Try it out by inputting a review that you found online, or wrote yourself, and it will clasify the review title, the review, or both with a score between 1-5.
 
@@ -384,7 +384,7 @@ The error is more contained within adjacent scores with the neural network model
     
 After seeing the improvements from the Stacking model, I was more confident about deploying the model for actionable use.
     
-I planned on future improvements being the addition of the neural network model and then creating an application for the model, so as a next step I decided to make a working application to test out new reviews using streamlit. I have deployed the app using Heroku: https://hilton-hotel-app.herokuapp.com/. 
+<!-- #I planned on future improvements being the addition of the neural network model and then creating an application for the app #using Heroku: https://hilton-hotel-app.herokuapp.com/.  -->
     
 Using this model, we will learn more about our new and old customers, then we can improve Hilton Hotel's guest satisfaction, and as a result increase customer retention and bring in new travelers.
     
