@@ -1,7 +1,7 @@
 <h1 align='center'>CHENNAI HOTEL REVIEWS CLASSIFIER</h1>
 
 <p align="center">
-  <img src="https://github.com/awesomeahi95/Hotel_Review_NLP/blob/master/Images/five_stars.png" width=600>
+  <img src="https://github.com/avinashnair02/Hotel_Review_Classifier_/blob/master/Images/five_stars.png" width=600>
 </p>
 
 #<strong> Here is a demo application of the review classifier: https://hilton-hotel-app.herokuapp.com/ </strong> 
@@ -12,7 +12,7 @@ Try it out by inputting a review that you found online, or wrote yourself, and i
 
 In the modern day, public discussion and critiquing of products and services occurs beyond dedicated mediums, and now also takes place in the realm of social media, too.
 
-Online Hilton Hotel reviews are currently found on tripadvisor, trustpilot, and expedia. The majority of reviewers gave a score between 3 and 5, so if a new customer browses online reviews on any of the previously mentioned review sites, they may consider booking a room at the Hilton. 
+Online  Hotel reviews are currently found on tripadvisor, trustpilot, and expedia. The majority of reviewers gave a score between 3 and 5, so if a new customer browses online reviews on any of the previously mentioned review sites, they may consider booking a room at the Hilton. 
 
 What if they already made up their mind from hearing what a friend had to say?
 Potential customers, could have their hotel choice be influenced by a tweet. Opinions are shared constantly on social media platforms, and are read by their followers. The knowledge, of what these followers think about our hotel, from reading these online posts, could help us better understand the general public's perception of our hotel. 
@@ -185,7 +185,8 @@ Medium: https://avinashnair02.medium.com/ <br>
 <a name="Webscraping"></a>
 #### Webscraping
 
-I set a goal of a minimum of 5000 reviews to scrape, before choosing the specific hotels. I then chose the 5 Hilton hotels with the highest number of reviews, to scrape; London Gatwick Airport, London Metropole, London Euston, London Croydon, and London - West End. 
+I set a goal of a minimum of 5000 reviews to scrape, before choosing the specific hotels. I then chose the 8  hotels in Chennai  with the highest number of reviews, to scrape;The_Park_Chennai-Chennai_,GreenPark_Chennai-Chennai
+,Hilton_Chennai-Chennai_Ma,Hyatt_Regency_Chennai-Che,Taj_Club_House-Chennai_Ma,Radisson_Blu_Hotel_GRT_Ch,Lemon_Tree_Hotel_Chennai-. 
 Between these 5 hotels there were 17538 reviews, I had plenty room to filter or drop reviews and retain at least my minimum of 5000.
 
 <h5 align="center">Tripadvisor Review Example</h5>
