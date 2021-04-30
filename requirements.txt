@@ -5,3 +5,5 @@ matplotlib
 nltk
 scikit-learn
 seaborn
+keras
+tensorflow
