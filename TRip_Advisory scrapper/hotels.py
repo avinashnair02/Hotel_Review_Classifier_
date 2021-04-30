@@ -6,11 +6,14 @@ class HotelsSpider(scrapy.Spider):
     name = 'hotels'
     allowed_domains = ['www.tripadvisor.in']
     start_urls = [
-        'https://www.tripadvisor.co.uk/Hotel_Review-g187051-d239658-Reviews-Hotel_Hilton_London_Gatwick_Airport-Crawley_West_Sussex_England.html/',
-                  'https://www.tripadvisor.co.uk/Hotel_Review-g186338-d193089-Reviews-Hilton_London_Metropole-London_England.html/',
-                  'https://www.tripadvisor.co.uk/Hotel_Review-g186338-d192048-Reviews-Hilton_London_Euston-London_England.html/',
-                  'https://www.tripadvisor.co.uk/Hotel_Review-g186338-d193102-Reviews-DoubleTree_by_Hilton_Hotel_London_West_End-London_England.html/',
-                  'https://www.tripadvisor.co.uk/Hotel_Review-g504167-d192599-Reviews-Hilton_London_Croydon-Croydon_Greater_London_England.html']
+       '/Hotel_Review-g304556-d2534781-Reviews-ITC_Grand_Chola_Chennai_a_Luxury_Collection_Hotel-Chennai_Madras_Chennai_District_Tami.html',
+        '/Hotel_Review-g304556-d301636-Reviews-The_Park_Chennai-Chennai_Madras_Chennai_District_Tamil_Nadu.html',
+        '/Hotel_Review-g304556-d730057-Reviews-GreenPark_Chennai-Chennai_Madras_Chennai_District_Tamil_Nadu.html',
+        '/Hotel_Review-g304556-d1597314-Reviews-Hilton_Chennai-Chennai_Madras_Chennai_District_Tamil_Nadu.html',
+        '/Hotel_Review-g304556-d1872115-Reviews-Hyatt_Regency_Chennai-Chennai_Madras_Chennai_District_Tamil_Nadu.html',
+        '/Hotel_Review-g304556-d1164749-Reviews-Taj_Club_House-Chennai_Madras_Chennai_District_Tamil_Nadu.html',
+        '/Hotel_Review-g304556-d306744-Reviews-Radisson_Blu_Hotel_GRT_Chennai-Chennai_Madras_Chennai_District_Tamil_Nadu.html',
+        '/Hotel_Review-g304556-d1382155-Reviews-Lemon_Tree_Hotel_Chennai-Chennai_Madras_Chennai_District_Tamil_Nadu.html']
 
     def parse(self, response):
         items = NlpItem()

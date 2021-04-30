@@ -49,17 +49,17 @@ Medium: https://avinashnair02.medium.com/ <br>
 <summary>Show/Hide</summary>
 <br>
     
-* <strong>[ Data ](https://github.com/awesomeahi95/Hotel_Review_NLP/tree/master/Data)</strong>: folder containing all data files
+* <strong>[ Data ](https://github.com/avinashnair02/Hotel_Review_Classifier_/tree/master/Data)</strong>: folder containing all data files
     * <strong>1.tripadvisor_scraped_hotel_reviews.csv</strong>: webscraped data before any changes
     * <strong>2.hotel_reviews_structured.csv</strong>: data after balancing and cleaning
     * <strong>3.x_train_data.csv</strong>: training data with x values from preprocessed dataset
     * <strong>3.y_train_data.csv</strong>: training data with y values from preprocessed dataset
     * <strong>4.x_test_data.csv</strong>: test data with x values from preprocessed dataset
     * <strong>4.y_test_data.csv</strong>: test data with y values from preprocessed dataset
-* <strong>[ Images ](https://github.com/awesomeahi95/Hotel_Review_NLP/tree/master/Images)</strong>: folder containing images used for README and presentation pdf
-* <strong>[ Models ](https://github.com/awesomeahi95/Hotel_Review_NLP/tree/master/Models)</strong>: folder containing trained models saved with pickle
+* <strong>[ Images ](https://github.com/avinashnair02/Hotel_Review_Classifier_/tree/master/Images</strong>: folder containing images used for README and presentation pdf
+* <strong>[ Models ](https://github.com/avinashnair02/Hotel_Review_Classifier_/tree/master/Models)</strong>: folder containing trained models saved with pickle
     * <strong>Adabooost.pkl, Decision Tree.pkl, KNN.pkl, Logistic Regression.pkl, Naive Bayes.pkl, Neural Network.pkl, Random Forest.pkl, Stacking.pkl, SVM.pkl, Voting.pkl, XGBoost.pkl</strong>
-* <strong>[ Tripadvisor_Webscrape ](https://github.com/awesomeahi95/Hotel_Review_NLP/tree/master/Tripadvisor_Webscrape)</strong>: folder containing all webscraping files
+* <strong>[ Tripadvisor_Webscrape ](https://github.com/avinashnair02/Hotel_Review_Classifier_/tree/master/TRip_Advisory%20scrapper)</strong>: folder containing all webscraping files
     * <strong>Tripadvisor</strong>: folder containing .py files and spiders used
         * <strong>spiders</strong>: folder containing spider files and datasets
             * <strong>hotels.py</strong>: main spider .py file for scraping hotel reviews from Tripadvisor
@@ -190,19 +190,21 @@ Between these 5 hotels there were 17538 reviews, I had plenty room to filter or 
 
 <h5 align="center">Tripadvisor Review Example</h5>
 <p align="center">
-  <img src="https://github.com/awesomeahi95/Hotel_Review_NLP/blob/master/Images/Tripadvisor_Review_Example.png" width=600>
+  <img src="https://github.com/avinashnair02/Hotel_Review_Classifier_/blob/master/Images/Trip_sample.PNG" width=600>
 </p>
 
 The structure of each review consisted of a 1-5 scale score rating in bubble form, a review summary, and a detailed review split into p1 and p2 (depending on if there was a read more option). Each page on tripadvisor had 5 reviews per page, so I had to navigate between pages using tripadvisor's next page function. 
 
-The root URL I used was 'www.tripadvisor.co.uk'
+The root URL I used was 'www.tripadvisor.co.in'
 
-The 5 starting URL extensions I used were:
-- '/Hotel_Review-g187051-d239658-Reviews-Hotel_Hilton_London_Gatwick_Airport-Crawley_West_Sussex_England.html/'
-- '/Hotel_Review-g186338-d193089-Reviews-Hilton_London_Metropole-London_England.html/'
-- '/Hotel_Review-g186338-d192048-Reviews-Hilton_London_Euston-London_England.html/'
-- '/Hotel_Review-g186338-d193102-Reviews-DoubleTree_by_Hilton_Hotel_London_West_End-London_England.html/'
-- '/Hotel_Review-g504167-d192599-Reviews-Hilton_London_Croydon-Croydon_Greater_London_England.html'
+The 8 starting URL extensions I used were:
+-'/Hotel_Review-g304556-d301636-Reviews-The_Park_Chennai-Chennai_Madras_Chennai_District_Tamil_Nadu.html'
+-'/Hotel_Review-g304556-d730057-Reviews-GreenPark_Chennai-Chennai_Madras_Chennai_District_Tamil_Nadu.html'
+-'/Hotel_Review-g304556-d1597314-Reviews-Hilton_Chennai-Chennai_Madras_Chennai_District_Tamil_Nadu.html'
+-'/Hotel_Review-g304556-d1872115-Reviews-Hyatt_Regency_Chennai-Chennai_Madras_Chennai_District_Tamil_Nadu.html'
+-'/Hotel_Review-g304556-d1164749-Reviews-Taj_Club_House-Chennai_Madras_Chennai_District_Tamil_Nadu.html'
+-'/Hotel_Review-g304556-d306744-Reviews-Radisson_Blu_Hotel_GRT_Chennai-Chennai_Madras_Chennai_District_Tamil_Nadu.html'
+-'/Hotel_Review-g304556-d1382155-Reviews-Lemon_Tree_Hotel_Chennai-Chennai_Madras_Chennai_District_Tamil_Nadu.html'
 
 From these pages I chose to extract 5 different features:
 - hotel_name
@@ -215,7 +217,7 @@ I used a scrapy spider to crawl the website to scrape the requested data. Scrapy
 
 <h5 align="center">Histogram of Scores for Each Hotel</h5>
 <p align="center">
-  <img src="https://github.com/awesomeahi95/Hotel_Review_NLP/blob/master/Images/histogram_of_scores_for_each_hotel.png" width=600>
+  <img src="https://github.com/avinashnair02/Hotel_Review_Classifier_/blob/master/Images/hotel_name.PNG" width=600>
 </p>
 
 
@@ -227,7 +229,7 @@ The initial shape of the dataset was (35078,5). The 5 columns was as expected, b
 This project entailed the use of classification models, and for reliable results, I had to remove reviews to undo class imbalance. Using this visualisation I saw that were much less reviews with a score of 1 compared to reviews with a score of 3, 4, and 5. To combat this imbalance, I randomly removed reviews with scores of 2, 3, 4, and 5, to match with 1 (1881 reviews). 
 
 <h5 align="center">Histogram of Scores for All Hotels (With  Class Imbalance (Left) vs Without  Class Imbalance (Right))</h5>
-<table><tr><td><img src='https://github.com/awesomeahi95/Hotel_Review_NLP/blob/master/Images/histogram_of_scores_for_all_hotels.png' width=500></td><td><img src='https://github.com/awesomeahi95/Hotel_Review_NLP/blob/master/Images/histogram_of_scores_for_all_hotels_after_balancing.png' width=500></td></tr></table>
+<table><tr><td><img src='https://github.com/avinashnair02/Hotel_Review_Classifier_/blob/master/Images/scores.PNG' width=500></td><td><img src='https://github.com/avinashnair02/Hotel_Review_Classifier_/blob/master/Images/balanced%20class.PNG' width=500></td></tr></table>
 
 I combined the review p1 and review p2 column into one to make future vectorisation much easier, then I saved the cleaned dataset as a csv, for the next stage.
 </details>  
@@ -243,18 +245,18 @@ The cleaned dataset had a shape of (9405,4). I started with some analysis on the
 Using the FreqDist function in the ntlk library I plotted a graph with the most frequent words and phrases in both columns. Stopwords were removed to capture the more meaningful words.
 
 <h5 align="center">Distribution Plot of Frequent Words and Phrases in Text ( Review Summary (Left) and Review (Right) )</h5>
-<table><tr><td><img src='https://github.com/awesomeahi95/Hotel_Review_NLP/blob/master/Images/freq_dist_review_sum.png' width=500></td><td><img src='https://github.com/awesomeahi95/Hotel_Review_NLP/blob/master/Images/freq_dist_review.png' width=500></td></tr></table>
+<table><tr><td><img src='https://github.com/avinashnair02/Hotel_Review_Classifier_/blob/master/Images/frequecy_dist_review.png' width=500></td><td><img src='https://github.com/avinashnair02/Hotel_Review_Classifier_/blob/master/Images/Frequecny_review_sum.png' width=500></td></tr></table>
 
 I had noticed a lot of the most frequent words in the review text happened to be words with no sentimental impact, so I iteratively removed unmeaningful words such as 'room', 'hotel', 'hilton' etc. I did this as a precaution, as some of these words may impact my model accuracies.
 
 <h5 align="center">World Cloud of Frequent Words and Phrases in Text After Removing Unmeaningful Words ( Review Summary (Left) and Review (Right) )</h5>
-<table><tr><td><img src='https://github.com/awesomeahi95/Hotel_Review_NLP/blob/master/Images/word_cloud_review_sum.png' width=500></td><td><img src='https://github.com/awesomeahi95/Hotel_Review_NLP/blob/master/Images/word_cloud_review.png' width=500></td></tr></table>
+<table><tr><td><img src='https://github.com/avinashnair02/Hotel_Review_Classifier_/blob/master/Images/chenniat.png' width=500></td><td><img src='https://github.com/avinashnair02/Hotel_Review_Classifier_/blob/master/Images/review_wordclod.png' width=500></td></tr></table>
 
 To narrow down the feature words I applied stemmation and lemmitisation to both the reviews and review summaries. 
 
 <h5 align="center">Example of Lemmatisation and Stemmation Applied to a Review and Review Summary</h5>
 <p align="center">
-  <img src="https://github.com/awesomeahi95/Hotel_Review_NLP/blob/master/Images/lemm_stemm_ex.png" width=600>
+  <img src="https://github.com/avinashnair02/Hotel_Review_Classifier_/blob/master/Images/lemm_stemm_review.PNG" width=600>
 </p>
 
 Stemmation had broken down some words into words that don't exist, whereas lemmitisation had simplified adjectives and verbs to their root form. I chose to continue with the lemmitised version of the texts for further processing.
@@ -279,7 +281,7 @@ For the majority of models I created, I applied hyperparameter tuning, where I s
 
 <h5 align="center">Table Comparing Best Models</h5>
 <p align="center">
-  <img src="https://github.com/awesomeahi95/Hotel_Review_NLP/blob/master/Images/all_models.png" width=600>
+  <img src="https://github.com/avinashnair02/Hotel_Review_Classifier_/blob/master/Images/XGboost.PNG" width=600>
 </p>
 
 Initially, I thought the validation accuracy was low for most of the models I created, but when considering these models were attempting to classify for 5 different classes, 0.45 and greater seems very reasonable (where 0.2 = randomly guessing correctly).
@@ -349,7 +351,7 @@ I experimented with different classifcation and ensemble methods to help classif
     
 <h5 align="center">Neural Network Architecture</h5>
 <p align="center">
-  <img src="https://github.com/awesomeahi95/Hotel_Review_NLP/blob/master/Images/NN_architecture.png" width=600>
+  <img src="https://github.com/avinashnair02/Hotel_Review_Classifier_/blob/master/Images/NN_architecture.png" width=600>
 </p>
     
 * Input Layer: 17317 Nodes (one for each word in training data + 4 extra for padding, unknown words, start of review, and unused words)
