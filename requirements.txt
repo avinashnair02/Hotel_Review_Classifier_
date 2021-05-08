@@ -7,6 +7,4 @@ scikit_learn
 gunicorn==20.0.4
 Flask==1.0.2
 Flask-Cors==1.10.3
-nltk
-keras
-tensorflow
+nltk==3.4.5
