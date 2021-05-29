@@ -2,7 +2,7 @@ numpy
 pandas
 streamlit
 keras
-tensorflow
+tensorflow-cpu==2.5.0
 matplotlib
 nltk
 scikit-learn
