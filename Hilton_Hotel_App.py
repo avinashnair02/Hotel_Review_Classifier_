@@ -22,9 +22,9 @@ from keras.preprocessing import sequence
 
 #===============================================================================================#
 
-word_index_dict = pickle.load(open('C:/Users/Avinish/Desktop/scapy/nlp/nlp/spiders/Models/word_index_dict.pkl','rb'))
+word_index_dict = pickle.load(open('word_index_dict.pkl','rb'))
 
-neural_net_model = load_model('C:/Users/Avinish/Desktop/scapy/nlp/nlp/spiders/Models/Neural_Network.h5')
+neural_net_model = load_model('Neural_Network.h5')
 
 tokenizer = RegexpTokenizer(r'[a-zA-Z]+')
 
