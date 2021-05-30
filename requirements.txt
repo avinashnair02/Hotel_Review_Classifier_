@@ -7,3 +7,4 @@ matplotlib
 nltk
 scikit-learn
 seaborn
+htbuilder==0.5.0
