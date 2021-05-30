@@ -194,7 +194,7 @@ Hyatt_Regency_Chennai-Che
 Taj_Club_House-Chennai_Ma
 Radisson_Blu_Hotel_GRT_Ch
 Lemon_Tree_Hotel_Chennai-. 
-Between these 5 hotels there were 17538 reviews, I had plenty room to filter or drop reviews and retain at least my minimum of 5000.
+
 
 <h5 align="center">Tripadvisor Review Example</h5>
 <p align="center">
@@ -224,7 +224,7 @@ From these pages I chose to extract 5 different features:
 - review_p2
 - score
 
-I used a scrapy spider to crawl the website to scrape the requested data. Scrapy proved the be efficient and fast at extracting the data. I ran the spider script (hotels.py) for around 20 minutes, on the 13th May 2020.
+I used a scrapy spider to crawl the website to scrape the requested data. Scrapy proved the be efficient and fast at extracting the data. I ran the spider script (hotels.py) for around 30 minutes, on the 13th March 2021.
 
 <h5 align="center">Histogram of Scores for Each Hotel</h5>
 <p align="center">
@@ -235,7 +235,7 @@ I used a scrapy spider to crawl the website to scrape the requested data. Scrapy
 <a name="Early_EDA_and_Cleaning"></a>
 #### Early EDA and Cleaning: 
 
-The initial shape of the dataset was (35078,5). The 5 columns was as expected, but there were double the number of rows as the number of reviews scraped. There were null rows with only hotel_name and no other values, so I removed those rows, bringing us back to the expected 17538.
+The initial shape of the dataset was (48640, 5)). The 5 columns was as expected, but there were double the number of rows as the number of reviews scraped. There were null rows with only hotel_name and no other values, so I removed those rows, bringing us back to the expected 4000
 
 This project entailed the use of classification models, and for reliable results, I had to remove reviews to undo class imbalance. Using this visualisation I saw that were much less reviews with a score of 1 compared to reviews with a score of 3, 4, and 5. To combat this imbalance, I randomly removed reviews with scores of 2, 3, 4, and 5, to match with 1 (1881 reviews). 
 
@@ -250,8 +250,7 @@ I combined the review p1 and review p2 column into one to make future vectorisat
 <details open>
 <summary>Show/Hide</summary>
 <br>
-    
-The cleaned dataset had a shape of (9405,4). I started with some analysis on the text columns; review and review summary.
+
 
 Using the FreqDist function in the ntlk library I plotted a graph with the most frequent words and phrases in both columns. Stopwords were removed to capture the more meaningful words.
 
