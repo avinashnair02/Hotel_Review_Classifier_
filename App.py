@@ -78,6 +78,9 @@ background-size: cover;
     background:none;
         backdrop-filter: blur(10px);
 }
+.stApp {
+    background:transparent;
+}
 </style>
 
 
