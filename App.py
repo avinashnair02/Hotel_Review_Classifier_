@@ -82,6 +82,8 @@ background-size: cover;
 
 
 '''
+
+
 sl.markdown(page_bg_img, unsafe_allow_html=True)
 
 
@@ -177,18 +179,18 @@ def layout(*args):
     st.markdown(str(foot), unsafe_allow_html=True)
 
 
-def footer():
-    myargs = [
-        "Made in ",
-        image('https://avatars3.githubusercontent.com/u/45109972?s=400&v=4',
-              width=px(25), height=px(25)),
-        " with ❤️ by Avinash Nair",
-        link("https://www.linkedin.com/in/avinash-nair-299b72157/", "@AvinashNair"),
-        br(),
+# def footer():
+#     myargs = [
+#         "Made in ",
+#         image('https://avatars3.githubusercontent.com/u/45109972?s=400&v=4',
+#               width=px(25), height=px(25)),
+#         " with ❤️ by Avinash Nair",
+#         link("https://www.linkedin.com/in/avinash-nair-299b72157/", "@AvinashNair"),
+#         br(),
         
-    ]
-    layout(*myargs)
+#     ]
+#     layout(*myargs)
 
 
-if __name__ == "__main__":
-    footer()
+# if __name__ == "__main__":
+#     footer()
