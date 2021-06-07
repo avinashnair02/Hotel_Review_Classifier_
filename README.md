@@ -424,4 +424,4 @@ Using this model, we will learn more about our new and old customers, then we ca
 
 #### Project Partner
 
-Pranav-bansod : LinkedIn: https://www.linkedin.com/in/avinash-nair-299b72157/ <br>
+Pranav-bansod : LinkedIn: https://www.linkedin.com/in/pranav-bansod-0715a11b9/ <br>
