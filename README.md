@@ -25,9 +25,9 @@ Email: avinashnair02@gmail.com <br>
 LinkedIn: https://www.linkedin.com/in/avinash-nair-299b72157/ <br>
 Medium: https://avinashnair02.medium.com/ <br>
 
-##MOtivation
+## Motivation
 
-This project is done to get a hands on understanding of the NLP concepts.
+This project is done to get a hands on understanding of the NLP concepts and Streamlit.
 
 ## Table of Contents
 
