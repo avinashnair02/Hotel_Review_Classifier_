@@ -81,6 +81,8 @@ background-size: cover;
 .stApp {
     background:transparent;
 }
+.st-cn {
+    background-color: aliceblue;
 </style>
 
 
@@ -116,7 +118,6 @@ if sl.button('Predict'):
     prediction = np.argmax(prediction)
     
     sl.success(prediction+1)
-
 import streamlit as st
 from htbuilder import HtmlElement, div, ul, li, br, hr, a, p, img, styles, classes, fonts
 from htbuilder.units import percent, px
