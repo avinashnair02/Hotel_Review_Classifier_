@@ -80,12 +80,12 @@ background-size: cover;
 }
 .stApp {
     background:transparent;
+     background:none;
+        backdrop-filter: blur(10px);
 }
 .st-cn {
     background-color: aliceblue;
 </style>
-
-
 '''
 
 
@@ -116,12 +116,21 @@ if sl.button('Predict'):
     prediction = neural_net_model.predict(all_review_text)
     
     prediction = np.argmax(prediction)
+    result = prediction+1
+    sl.success(result)
     
-    sl.success(prediction+1)
+    
+    image_path = 'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80'
+    if(result < 3):
+        image_path = 'https://images.unsplash.com/photo-1623556710453-d76c4ea26d1e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80'
+    else:
+        image_path = 'https://images.unsplash.com/photo-1623557385669-efc96a979445?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80'
+    sl.image(image_path)
 import streamlit as st
 from htbuilder import HtmlElement, div, ul, li, br, hr, a, p, img, styles, classes, fonts
 from htbuilder.units import percent, px
 from htbuilder.funcs import rgba, rgb
+
 
 
 def image(src_as_string, **style):
