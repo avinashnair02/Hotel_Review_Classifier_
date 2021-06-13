@@ -121,10 +121,16 @@ if sl.button('Predict'):
     
     
     image_path = 'https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80'
-    if(result < 3):
-        image_path = 'https://images.unsplash.com/photo-1623556710453-d76c4ea26d1e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80'
+    if result ==1:
+        image_path = 'https://media.giphy.com/media/MWs9L7oKYg8I1GoJtE/giphy.gif'
+    elif result ==2 :
+        image_path ='https://media.giphy.com/media/3o7aCX9OmzeK5M1KyQ/giphy.gif'
+    elif result == 3:
+        image_path ='https://media1.tenor.com/images/1136d13e5ec82425b6ef1d260097a7d4/tenor.gif?itemid=15088263'
+    elif result == 4:
+        image_path = 'https://media.giphy.com/media/l3mZ8kKTydBbfsDAY/giphy.gif'
     else:
-        image_path = 'https://images.unsplash.com/photo-1623557385669-efc96a979445?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1050&q=80'
+        image_path = 'https://media.giphy.com/media/l3q2HWkLF9sy9Jg1q/giphy.gif'
     sl.image(image_path)
 import streamlit as st
 from htbuilder import HtmlElement, div, ul, li, br, hr, a, p, img, styles, classes, fonts
