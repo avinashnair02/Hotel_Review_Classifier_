@@ -422,6 +422,3 @@ Using this model, we will learn more about our new and old customers, then we ca
 
 </details>
 
-#### Project Partner
-
-Pranav-bansod : https://www.linkedin.com/in/pranav-bansod-0715a11b9/ <br>
